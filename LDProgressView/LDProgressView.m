@@ -233,8 +233,8 @@
         label.adjustsFontSizeToFitWidth = YES;
         label.backgroundColor = [UIColor clearColor];
         label.textAlignment = self.textAlignment;
-        label.text = self.progressTextOverride ? self.progressTextOverride : [NSString stringWithFormat:@"%.0f%%", self.progress*100];
-        label.font = [UIFont boldSystemFontOfSize:17-self.progressInset.floatValue*1.75];
+        label.text = self.progressTextOverride ? self.progressTextOverride : [NSString stringWithFormat:@"%.0f", self.progress*10];
+        label.font = [UIFont boldSystemFontOfSize:12-self.progressInset.floatValue*1.75];
         UIColor *baseLabelColor = [self.color isLighterColor] ? [UIColor blackColor] : [UIColor whiteColor];
         label.textColor = self.progressTextColorOverride ? self.progressTextColorOverride : [baseLabelColor colorWithAlphaComponent:0.6];
         [label drawTextInRect:CGRectMake(rect.origin.x + 6, rect.origin.y, rect.size.width-12, rect.size.height)];
